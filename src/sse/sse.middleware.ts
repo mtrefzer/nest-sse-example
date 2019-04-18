@@ -1,4 +1,4 @@
-import { Injectable, MiddlewareFunction, NestMiddleware } from '@nestjs/common';
+import { Injectable, NestMiddleware } from '@nestjs/common';
 import { EventData } from 'express-sse-middleware/dist';
 import { SseService } from './sse.service';
 import { MsgData } from './msg-data';
@@ -24,16 +24,14 @@ export class SseMiddleware implements NestMiddleware {
     });
   }
 
-  resolve( ...args: any[] ): MiddlewareFunction {
-    return ( req, res ) => {
-      const sse = res.sse();
-      this.clientId += 1;
-      const clientId = this.clientId;
-      this.clients.set( clientId, sse );
-      req.on( 'close', () => {
-        sse.close();
-        this.clients.delete( clientId );
-      } );
-    };
+  use(req, res, next) {
+    const sse = res.sse();
+    this.clientId += 1;
+    const clientId = this.clientId;
+    this.clients.set( clientId, sse );
+    req.on( 'close', () => {
+      sse.close();
+      this.clients.delete( clientId );
+    } );
   }
 }
