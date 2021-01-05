@@ -1,5 +1,5 @@
 import { Injectable, NestMiddleware } from '@nestjs/common';
-import { EventData } from 'express-sse-middleware/dist';
+import { EventData } from 'express-sse-middleware/dist/EventBuilder';
 import { SseService } from './sse.service';
 import { MsgData } from './msg-data';
 
