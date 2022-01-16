@@ -1,6 +1,7 @@
 ## Description
 
 Simple SSE example for [Nest](https://github.com/nestjs/nest).
+As SSE now is part of NestJs better follow the [official documentation for SSE](https://https://docs.nestjs.com/techniques/server-sent-events). 
 
 ## Installation
 
