@@ -21,7 +21,7 @@
   },
   "dependencies": {
     "@nestjs/common": "8.4.5",
-    "@nestjs/core": "8.4.5",
+    "@nestjs/core": "9.0.5",
     "@nestjs/platform-express": "8.4.5",
     "express-sse-middleware": "3.0.3",
     "reflect-metadata": "0.1.13",
