@@ -9,9 +9,7 @@ import { SseService } from './sse.service';
   exports: [SseService],
 })
 export class SseModule implements NestModule {
-  configure( consumer: MiddlewareConsumer ) {
-    consumer
-      .apply( SseMiddleware )
-      .forRoutes( SseController );
+  configure(consumer: MiddlewareConsumer) {
+    consumer.apply(SseMiddleware).forRoutes(SseController);
   }
 }
