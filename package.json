@@ -12,12 +12,7 @@
     "start:dev": "nest start --watch",
     "start:debug": "nest start --debug --watch",
     "start:prod": "node dist/main",
-    "lint": "eslint \"{src,apps,libs,test,fixures}/**/*.ts\"",
-    "test": "jest",
-    "test:watch": "jest --watch",
-    "test:cov": "jest --coverage",
-    "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
-    "test:e2e": "jest --config ./test/jest-e2e.json"
+    "lint": "eslint \"{src,apps,libs,test,fixures}/**/*.ts\""
   },
   "dependencies": {
     "@nestjs/common": "11.1.9",
@@ -29,39 +24,19 @@
     "rxjs": "7.8.2"
   },
   "devDependencies": {
-    "@nestjs/cli": "11.0.12",
-    "@nestjs/testing": "11.1.9",
-    "@types/express": "5.0.5",
-    "@types/jest": "30.0.0",
+    "@nestjs/cli": "11.0.14",
+    "@types/express": "5.0.6",
     "@types/node": "24.10.1",
-    "@types/supertest": "6.0.3",
-    "@typescript-eslint/eslint-plugin": "8.47.0",
-    "@typescript-eslint/parser": "8.47.0",
+    "@typescript-eslint/eslint-plugin": "8.48.1",
+    "@typescript-eslint/parser": "8.48.1",
     "eslint": "9.39.1",
     "eslint-plugin-prettier": "^5.5.4",
     "eslint-config-prettier": "10.1.8",
-    "jest": "30.2.0",
     "minimist": "1.2.8",
-    "prettier": "3.6.2",
-    "supertest": "7.1.4",
-    "ts-jest": "29.4.5",
+    "prettier": "3.7.4",
     "ts-loader": "9.5.4",
     "ts-node": "10.9.2",
     "tsconfig-paths": "4.2.0",
     "typescript": "5.9.3"
-  },
-  "jest": {
-    "moduleFileExtensions": [
-      "js",
-      "json",
-      "ts"
-    ],
-    "rootDir": "src",
-    "testRegex": ".spec.ts$",
-    "transform": {
-      "^.+\\.(t|j)s$": "ts-jest"
-    },
-    "coverageDirectory": "../coverage",
-    "testEnvironment": "node"
   }
 }
