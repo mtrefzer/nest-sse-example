@@ -14,3 +14,8 @@ jobs:
         run: pnpm install --no-frozen-lockfile
       - name: Show lock file
         run: cat pnpm-lock.yaml
+      - name: Upload lock file as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: pnpm-lock
+          path: pnpm-lock.yaml
