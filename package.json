@@ -4,6 +4,9 @@
   "description": "description",
   "author": "Michael Trefzer",
   "license": "MIT",
+  "engines": {
+    "node": "24"
+  },
   "scripts": {
     "prebuild": "rimraf dist",
     "build": "nest build",
