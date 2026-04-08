@@ -27,11 +27,11 @@
     "rxjs": "7.8.2"
   },
   "devDependencies": {
-    "@nestjs/cli": "11.0.17",
+    "@nestjs/cli": "11.0.18",
     "@types/express": "5.0.6",
-    "@types/node": "24.11.0",
-    "@typescript-eslint/eslint-plugin": "8.58.0",
-    "@typescript-eslint/parser": "8.58.0",
+    "@types/node": "25.5.2",
+    "@typescript-eslint/eslint-plugin": "8.58.1",
+    "@typescript-eslint/parser": "8.58.1",
     "eslint": "10.2.0",
     "eslint-plugin-prettier": "5.5.5",
     "eslint-config-prettier": "10.1.8",
@@ -41,9 +41,5 @@
     "ts-node": "10.9.2",
     "tsconfig-paths": "4.2.0",
     "typescript": "5.9.3"
-  },
-  "overrides": {
-    "lodash": "4.18.1",
-    "picomatch": "4.0.4"
   }
 }
