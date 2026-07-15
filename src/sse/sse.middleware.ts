@@ -24,7 +24,7 @@ export class SseMiddleware implements NestMiddleware {
     });
   }
 
-  use(req, res) {
+  use(req: { on: (arg0: string, arg1: () => void) => void; }, res: { sse: () => any; }) {
     const sse = res.sse();
     this.clientId += 1;
     const clientId = this.clientId;
