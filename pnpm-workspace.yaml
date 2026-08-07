@@ -1,0 +1,5 @@
+packages:
+  - "."
+
+overrides:
+  "js-yaml@4": "4.3.1"
