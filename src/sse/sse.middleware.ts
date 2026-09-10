@@ -1,4 +1,5 @@
 import { Injectable, NestMiddleware } from '@nestjs/common';
+import { Request, Response } from 'express';
 import { EventData } from 'express-sse-middleware/dist/EventBuilder';
 import SseProvider from 'express-sse-middleware/dist/SseProvider';
 import { SseService } from './sse.service';
@@ -24,7 +25,7 @@ export class SseMiddleware implements NestMiddleware {
     });
   }
 
-  use(req: { on: (arg0: string, arg1: () => void) => void; }, res: { sse: () => any; }) {
+  use(req: Request, res: Response) {
     const sse = res.sse();
     this.clientId += 1;
     const clientId = this.clientId;

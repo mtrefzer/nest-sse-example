@@ -15,7 +15,7 @@
     "start:dev": "nest start --watch",
     "start:debug": "nest start --debug --watch",
     "start:prod": "node dist/main",
-    "lint": "eslint \"{src,apps,libs,test,fixures}/**/*.ts\""
+    "lint": "eslint ."
   },
   "dependencies": {
     "@nestjs/common": "11.1.29",
